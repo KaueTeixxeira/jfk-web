@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    height: 100%;
+    background-color: #F5F5F5;
+}
+
+.header {
+    background-color: #0096c7;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    padding: 0px 2%;
+}
+
+.logo {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.products-view {
+    padding: 20px 5%;
+}
+
+.carrosell {
+    background-color: gray;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease;
+}
+
+.product:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada no hover */
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.details-button {
+    background-color: #1d79dd;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.subtitle {
+    width: fit-content;
+    border-bottom: solid 2px #1d79dd;
+}
+
+.product-infos {
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.product-label,
+.product-title {
+   padding-bottom: 5px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .header {
+        height: 10vh;
+        padding: 0px 5%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .carrosell {
+        height: 25vh;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .products-view {
+        padding: 20px 10%;
+    }
+
+    .details-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Responsividade para telas muito pequenas (mobile) */
+@media (max-width: 480px) {
+    .header {
+        height: 12vh;
+        padding: 0px 3%;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .carrosell {
+        height: 20vh;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .products-view {
+        padding: 20px 5%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-button {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+}
+
+
